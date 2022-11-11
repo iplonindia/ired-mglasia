@@ -7,20 +7,6 @@
         "info": ""
     },
     {
-        "id": "c563e3c6072c32be",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "",
-        "keyname": "",
-        "caname": "",
-        "servername": "",
-        "verifyservercert": false,
-        "alpnprotocol": ""
-    },
-    {
         "id": "705b30eaab2edcd3",
         "type": "influxdb",
         "hostname": "iplon-pvindia.com",
@@ -61,6 +47,20 @@
         "influxdbVersion": "1.x",
         "url": "http://localhost:8086",
         "rejectUnauthorized": true
+    },
+    {
+        "id": "c563e3c6072c32be",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false,
+        "alpnprotocol": ""
     },
     {
         "id": "4b55ffb4aa5645e5",
@@ -184,8 +184,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 490,
-        "y": 320,
+        "x": 950,
+        "y": 260,
         "wires": [
             []
         ]
@@ -336,8 +336,7 @@
         "y": 260,
         "wires": [
             [
-                "a7408c23d9af16c9",
-                "1df36c35347933fc"
+                "a7408c23d9af16c9"
             ]
         ]
     },
