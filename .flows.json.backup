@@ -184,8 +184,8 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 490,
-        "y": 320,
+        "x": 390,
+        "y": 340,
         "wires": [
             []
         ]
@@ -354,7 +354,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 440,
-        "y": 260,
+        "y": 220,
         "wires": []
     },
     {
