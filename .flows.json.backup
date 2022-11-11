@@ -371,28 +371,7 @@
         "x": 320,
         "y": 720,
         "wires": [
-            [
-                "a5a394a6d710e783"
-            ]
-        ]
-    },
-    {
-        "id": "d96c85e364fccba6",
-        "type": "influxdb in",
-        "z": "f6f2187d.f17ca8",
-        "influxdb": "705b30eaab2edcd3",
-        "name": "B01",
-        "query": "SELECT last(\"value\") FROM \"scaback_csv\" WHERE (\"b\" = 'B01' AND \"f\" =~ /.*SCB*./) AND time >= now() - 10m GROUP BY time(1m), \"b\", \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"scaback_csv\" WHERE (\"b\" = 'B01' AND \"f\" = 'UDC') AND time >= now() - 10m GROUP BY time(1m), \"b\", \"d\", \"f\" fill(none);",
-        "rawOutput": false,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "organisation",
-        "x": 550,
-        "y": 580,
-        "wires": [
-            [
-                "0d68db5027dad796"
-            ]
+            []
         ]
     },
     {
@@ -448,23 +427,6 @@
         ]
     },
     {
-        "id": "bdb8a9ee9383591c",
-        "type": "influxdb in",
-        "z": "f6f2187d.f17ca8",
-        "influxdb": "8a27bede3cf9f811",
-        "name": "dimo",
-        "query": "SELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'GRID_EM' AND \"f\" = 'UAC12') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'GRID_EM' AND \"f\" = 'UAC23') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'GRID_EM' AND \"f\" = 'UAC31') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'DG2' AND \"f\" = 'EAE') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'DG1' AND \"f\" = 'EAE') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'dimo_700W' AND \"d\" = 'SOLAR_EM' AND \"f\" = 'EAE') AND time >= now() - 1d GROUP BY time(1m), \"d\", \"f\" fill(none)",
-        "rawOutput": false,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "organisation",
-        "x": 490,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f31fccd9bd85f1ac",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
@@ -480,26 +442,6 @@
         "x": 950,
         "y": 840,
         "wires": []
-    },
-    {
-        "id": "a5a394a6d710e783",
-        "type": "influxdb in",
-        "z": "f6f2187d.f17ca8",
-        "influxdb": "edb3988ac6dcfbf7",
-        "name": "hysolwin",
-        "query": "SELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'hysolwin_5MW' AND \"d\" = 'INV01' AND \"f\" = 'TOTAL_INV_EAE_DAY') AND time >= now() - 10d GROUP BY time(5m),p,b,d,f fill(previous);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'hysolwin_5MW' AND \"d\" = 'INV22' AND \"f\" = 'TOTAL_INV_EAE_DAY') AND time >= now() - 10d GROUP BY time(5m),p,b,d,f fill(previous);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'hysolwin_5MW' AND \"d\" = 'INV08' AND \"f\" = 'TOTAL_INV_EAE_DAY') AND time >= now() - 10d GROUP BY time(5m),p,b,d,f fill(previous);\nSELECT last(\"value\") FROM \"v\" WHERE (\"bd\" = 'hysolwin_5MW' AND \"d\" = 'INV14' AND \"f\" = 'TOTAL_INV_EAE_DAY') AND time >= now() - 10d GROUP BY time(5m),p,b,d,f fill(previous);",
-        "rawOutput": false,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "organisation",
-        "x": 460,
-        "y": 840,
-        "wires": [
-            [
-                "01bc2d9d9ed192e7",
-                "f31fccd9bd85f1ac"
-            ]
-        ]
     },
     {
         "id": "202746a15c1b5e18",
